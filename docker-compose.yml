@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  acorn-file-manager:
+    build: .
+    volumes:
+      - ./acorn-file-manager:/file-manager
+    stdin_open: true
+    tty: true
