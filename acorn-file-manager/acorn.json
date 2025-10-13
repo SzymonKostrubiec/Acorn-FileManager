@@ -1,0 +1,24 @@
+{
+  "name": "acorn-file-manager",
+  "config": {
+    "autoload_output_file": "var/cache/autoload.nut",
+    "cache_dir": "var/cache",
+    "storage_dir": "var/storage",
+    "logs_dir": "var/logs"
+  },
+  "packages": [
+     {
+      "name": "acorn",
+      "version": "2.1.0",
+      "autoload": {
+        "repos": [
+          {
+            "url": "https://github.com/SzymonKostrubiec/Acorn.git",
+            "branch": "dev",
+            "path": "vendor/acorn"
+          }
+        ]
+      }
+    }
+  ]
+}
