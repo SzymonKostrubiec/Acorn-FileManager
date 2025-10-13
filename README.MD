@@ -6,7 +6,7 @@ Acorn CLI — command-line tool for managing projects using the Acorn Framework 
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)
-![Docker](https://img.shields.io/badge/Docker-ready-aqua.svg)
+![Docker](https://img.shields.io/badge/Docker-supported-orange.svg)
 
 
 ---
