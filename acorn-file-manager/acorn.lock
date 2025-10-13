@@ -1,0 +1,7 @@
+{
+  "autoload": [
+    "vendor/acorn/acorn/app/Controllers/UserController.nut",
+    "vendor/acorn/acorn/app/Loggers/Logger.nut",
+    "vendor/acorn/acorn/app/Services/UserService.nut"
+  ]
+}
