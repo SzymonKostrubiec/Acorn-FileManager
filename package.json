@@ -1,26 +1,9 @@
 {
-  "name": "@acorn/file-manager",
+  "name": "nutget",
   "version": "0.1.0",
-  "description": "Composer-like package manager and autoload generator for Acorn .nut scripts",
-  "type": "module",
-  "files": [
-    "dist",
-    "README.MD",
-    "LICENSE"
-  ],
-  "bin": {
-    "acorn": "./dist/acorn.cjs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/SzymonKostrubiec/Acorn-FileManager.git"
-  },
-  "homepage": "https://github.com/SzymonKostrubiec/Acorn-FileManager",
-  "bugs": {
-    "url": "https://github.com/SzymonKostrubiec/Acorn-FileManager/issues"
-  },
+  "description": "Standalone Composer-like package manager for Squirrel and .nut projects",
   "keywords": [
-    "acorn",
+    "nutget",
     "squirrel",
     "nut",
     "cli",
@@ -28,8 +11,27 @@
     "autoload",
     "framework"
   ],
+  "homepage": "https://github.com/SzymonKostrubiec/Acorn-FileManager",
+  "bugs": {
+    "url": "https://github.com/SzymonKostrubiec/Acorn-FileManager/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SzymonKostrubiec/Acorn-FileManager.git"
+  },
+  "license": "MIT",
+  "author": "Szymon Kostrubiec",
+  "type": "module",
+  "bin": {
+    "nutget": "dist/nutget.cjs"
+  },
+  "files": [
+    "dist",
+    "README.MD",
+    "LICENSE"
+  ],
   "scripts": {
-    "smoke": "node ./bin/acorn.js help",
+    "smoke": "node ./bin/nutget.js help",
     "pack:preview": "npm pack --dry-run",
     "build:bundle": "node ./scripts/build-bundle.mjs",
     "build:binary": "node ./scripts/build-sea.mjs",
@@ -37,15 +39,14 @@
     "prepack": "npm run build:bundle",
     "prepublishOnly": "npm run smoke && npm run pack:preview"
   },
-  "publishConfig": {
-    "access": "public"
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "postject": "^1.0.0-alpha.6"
   },
   "engines": {
     "node": ">=20.0.0"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "esbuild": "^0.25.0",
-    "postject": "^1.0.0-alpha.6"
+  "publishConfig": {
+    "access": "public"
   }
 }
