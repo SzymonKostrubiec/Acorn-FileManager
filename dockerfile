@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     cmake \
     wget \
     curl \
+    jq \
     && rm -rf /var/lib/apt/lists/*
 
 # Pobieramy i kompilujemy Squirrel ze źródła

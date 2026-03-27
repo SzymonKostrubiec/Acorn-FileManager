@@ -1,0 +1,51 @@
+{
+  "name": "@acorn/file-manager",
+  "version": "0.1.0",
+  "description": "Composer-like package manager and autoload generator for Acorn .nut scripts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.MD",
+    "LICENSE"
+  ],
+  "bin": {
+    "acorn": "./dist/acorn.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SzymonKostrubiec/Acorn-FileManager.git"
+  },
+  "homepage": "https://github.com/SzymonKostrubiec/Acorn-FileManager",
+  "bugs": {
+    "url": "https://github.com/SzymonKostrubiec/Acorn-FileManager/issues"
+  },
+  "keywords": [
+    "acorn",
+    "squirrel",
+    "nut",
+    "cli",
+    "package-manager",
+    "autoload",
+    "framework"
+  ],
+  "scripts": {
+    "smoke": "node ./bin/acorn.js help",
+    "pack:preview": "npm pack --dry-run",
+    "build:bundle": "node ./scripts/build-bundle.mjs",
+    "build:binary": "node ./scripts/build-sea.mjs",
+    "build:release": "npm run build:bundle && npm run build:binary",
+    "prepack": "npm run build:bundle",
+    "prepublishOnly": "npm run smoke && npm run pack:preview"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "postject": "^1.0.0-alpha.6"
+  }
+}
